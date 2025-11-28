@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="IV_height">150dp</dimen>
+    <dimen name="IV_marginTop">100dp</dimen>
+    <dimen name="ET_marginEnd">30dp</dimen>
+    <dimen name="ET_marginStart">30dp</dimen>
+</resources>

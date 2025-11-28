@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Proyecto-Desarrollo-Movil</string>
+    <string name="TV_inicio_de_sesion">Inicio de Sesion</string>
+    <string name="ET_hintCorreo">   Correo Electronico</string>
+    <string name="ET_hintPassword">Contraseña</string>
+    <string name="btn_InicioSesion">Iniciar Sesión</string>
+    <string name="TV_Registrar">¿No tienes cuenta? Regístrate aquí</string>
+    <string name="title_activity_registrar_usuario">RegistrarUsuario</string>
+    <string name="image_description">Descripción de la imagen para accesibilidad</string>
+    <string name="ET_crearCuenta">Crear Cuenta Nueva</string>
+    <string name="ET_nombre">Nombre de Usuario</string>
+    <string name="ET_correoRegistrar">Correo</string>
+    <string name="ET_contraseñaRegistrar">Contraseña</string>
+    <string name="btn_registrarse">Registrarse</string>
+    <string name="tx_btnParques">Parques</string>
+    <string name="txt_btnReporte">Reporte</string>
+    <string name="txt_btnAjustes">Ajustes</string>
+    <string name="tv_encabezadoCiudad">📍 Culiacán, Sinaloa</string>
+    <string name="et_buscarParques">Buscar parques en Culiacán...</string>
+    <string name="et_apellidosR">Apellidos</string>
+    <string name="btn_cerrarSesion">Salir</string>
+    <string name="tv_encabezado_parkManager">Park Manager</string>
+
+</resources>
