@@ -16,7 +16,7 @@ public class NetworkUtils {
     public static String sendPostRequest(String endpoint, String jsonInput) {
         HttpURLConnection connection = null;
         try {
-            String fullEndpoint = endpoint + ".php";
+            String fullEndpoint = endpoint;
             URL url = new URL(BASE_URL + fullEndpoint);
             connection = (HttpURLConnection) url.openConnection();
 
