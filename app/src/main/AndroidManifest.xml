@@ -48,6 +48,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD2UvpBzMSM0sFYDfxhx1ZHDVUBO_tB8cw" />
 
+        <activity
+            android:name=".ui.theme.ParquesActivity"
+            android:exported="false" />
+
+
     </application>
 
 </manifest>

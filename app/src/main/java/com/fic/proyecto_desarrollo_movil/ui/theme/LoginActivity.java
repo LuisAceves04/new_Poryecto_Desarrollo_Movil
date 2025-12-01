@@ -122,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
             Log.d(TAG, "JSON a enviar: " + jsonInput);
 
             // URL completa
-            String urlCompleta = "http://192.168.100.27/parkmanager/api/login.php";
+            String urlCompleta = "http://192.168.1.17/parkmanager/api/login.php";
             Log.d(TAG, "URL completa: " + urlCompleta);
 
             URL url = new URL(urlCompleta);

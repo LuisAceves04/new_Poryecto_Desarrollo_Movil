@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fic.proyecto_desarrollo_movil.ui.theme.LoginActivity;
+import com.fic.proyecto_desarrollo_movil.ui.theme.ParquesActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -141,8 +142,10 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         Button btnAjustes = findViewById(R.id.btn_Ajustes);
 
         if (btnParques != null) {
-            btnParques.setOnClickListener(v ->
-                    Toast.makeText(HomeActivity.this, "Parques clickeado", Toast.LENGTH_SHORT).show());
+            btnParques.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, ParquesActivity.class);
+                startActivity(intent);
+            });
         }
 
         if (btnReporte != null) {
@@ -155,6 +158,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                     Toast.makeText(HomeActivity.this, "Ajustes clickeado", Toast.LENGTH_SHORT).show());
         }
     }
+
 
     // metodo de cerrar sesion
     private void logout() {
