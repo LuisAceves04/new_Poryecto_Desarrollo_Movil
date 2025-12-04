@@ -138,24 +138,12 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void setupButtons() {
         Button btnParques = findViewById(R.id.btn_Parques);
-        Button btnReporte = findViewById(R.id.btn_Reporte);
-        Button btnAjustes = findViewById(R.id.btn_Ajustes);
 
         if (btnParques != null) {
             btnParques.setOnClickListener(v -> {
                 Intent intent = new Intent(HomeActivity.this, ParquesActivity.class);
                 startActivity(intent);
             });
-        }
-
-        if (btnReporte != null) {
-            btnReporte.setOnClickListener(v ->
-                    Toast.makeText(HomeActivity.this, "Reporte clickeado", Toast.LENGTH_SHORT).show());
-        }
-
-        if (btnAjustes != null) {
-            btnAjustes.setOnClickListener(v ->
-                    Toast.makeText(HomeActivity.this, "Ajustes clickeado", Toast.LENGTH_SHORT).show());
         }
     }
 

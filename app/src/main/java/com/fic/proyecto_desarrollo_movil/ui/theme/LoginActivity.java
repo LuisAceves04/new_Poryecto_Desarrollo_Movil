@@ -122,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
             Log.d(TAG, "JSON a enviar: " + jsonInput);
 
             // URL completa
-            String urlCompleta = "http://192.168.1.17/parkmanager/api/login.php";
+            String urlCompleta = "http://192.168.100.27/parkmanager/api/login.php";
             Log.d(TAG, "URL completa: " + urlCompleta);
 
             URL url = new URL(urlCompleta);
@@ -229,17 +229,16 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("user_email", email);
 
         try {
-            if (jsonResponse.has("user")) {
-                JSONObject userData = jsonResponse.getJSONObject("user");
+            if (jsonResponse.has("usuario")) {
+                JSONObject userData = jsonResponse.getJSONObject("usuario");
 
                 if (userData.has("id")) {
-                    editor.putInt("user_id", userData.getInt("id"));
+                    editor.putInt("USER_ID", userData.getInt("id"));
+                    Log.d(TAG, "ID de usuario guardado: " + userData.getInt("id"));
                 }
-                if (userData.has("name")) {
-                    editor.putString("user_name", userData.getString("name"));
-                }
-                if (userData.has("user_id")) {
-                    editor.putInt("user_id", userData.getInt("user_id"));
+
+                if (userData.has("nombre")) {
+                    editor.putString("user_name", userData.getString("nombre"));
                 }
             }
         } catch (JSONException e) {

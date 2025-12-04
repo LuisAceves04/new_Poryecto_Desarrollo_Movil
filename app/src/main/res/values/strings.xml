@@ -12,13 +12,16 @@
     <string name="ET_correoRegistrar">Correo</string>
     <string name="ET_contraseñaRegistrar">Contraseña</string>
     <string name="btn_registrarse">Registrarse</string>
-    <string name="tx_btnParques">Parques</string>
-    <string name="txt_btnReporte">Reporte</string>
-    <string name="txt_btnAjustes">Ajustes</string>
+    <string name="tx_btnParques">Lista Parques</string>
     <string name="tv_encabezadoCiudad">📍 Culiacán, Sinaloa</string>
     <string name="et_buscarParques">Buscar parques en Culiacán...</string>
     <string name="et_apellidosR">Apellidos</string>
-    <string name="btn_cerrarSesion">Salir</string>
+    <string name="btn_cerrarSesion">Cerrar Sesión</string>
     <string name="tv_encabezado_parkManager">Park Manager</string>
+    <string name="tv_nuevo_reporte">Hacer Nuevo Reporte</string>
+    <string name="tv_parque_seleccionado">Parque Seleccionado:</string>
+    <string name="tv_detalle_reporte">Detalles del Reporte:</string>
+    <string name="et_ejemplo_reporte">Ej. Falla en la iluminación, banca rota, etc.</string>
+    <string name="btn_enviar_reporte">Enviar Reporte</string>
 
 </resources>

@@ -52,6 +52,11 @@
             android:name=".ui.theme.ParquesActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".ui.theme.ReporteActivity"
+            android:exported="false" />
+
+
 
     </application>
 

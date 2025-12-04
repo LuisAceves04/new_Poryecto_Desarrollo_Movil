@@ -34,7 +34,8 @@ public class ParquesActivity extends AppCompatActivity {
         listaParques.add(new Parque("Plazuela Alvaro Obregon", "Zona Centro"));
 
 
-        adapter = new ParqueAdapter(listaParques);
+        adapter = new ParqueAdapter(listaParques, this);
+
         recyclerParques.setAdapter(adapter);
     }
 }
