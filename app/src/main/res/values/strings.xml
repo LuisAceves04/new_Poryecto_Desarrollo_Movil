@@ -23,5 +23,9 @@
     <string name="tv_detalle_reporte">Detalles del Reporte:</string>
     <string name="et_ejemplo_reporte">Ej. Falla en la iluminación, banca rota, etc.</string>
     <string name="btn_enviar_reporte">Enviar Reporte</string>
+    <string name="tv_titulo_lista">Park Manager</string>
+    <string name="tv_subtitulo_lista">Explorar Parques</string>
+    <string name="tv_nombre_item">Nombre del Parque</string>
+    <string name="tv_direccion_item">Ubicación</string>
 
 </resources>
