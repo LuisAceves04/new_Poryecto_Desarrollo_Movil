@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.fic.proyecto_desarrollo_movil.ui.theme.MisReportesActivity;
 import com.fic.proyecto_desarrollo_movil.ui.theme.LoginActivity;
 import com.fic.proyecto_desarrollo_movil.ui.theme.ParquesActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -138,10 +139,18 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void setupButtons() {
         Button btnParques = findViewById(R.id.btn_Parques);
+        Button btnMisReportes = findViewById(R.id.btn_Reportes);
 
         if (btnParques != null) {
             btnParques.setOnClickListener(v -> {
                 Intent intent = new Intent(HomeActivity.this, ParquesActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (btnMisReportes != null) {
+            btnMisReportes.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, MisReportesActivity.class);
                 startActivity(intent);
             });
         }

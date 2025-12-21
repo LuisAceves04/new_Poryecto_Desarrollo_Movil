@@ -27,5 +27,8 @@
     <string name="tv_subtitulo_lista">Explorar Parques</string>
     <string name="tv_nombre_item">Nombre del Parque</string>
     <string name="tv_direccion_item">Ubicación</string>
+    <string name="tv_mis_reportes">Mis Reportes</string>
+    <string name="tv_fecha_item_reportes">Fecha: 2023-10-10</string>
+    <string name="tv_descripcion_problema">Descripción del problema...</string>
 
 </resources>

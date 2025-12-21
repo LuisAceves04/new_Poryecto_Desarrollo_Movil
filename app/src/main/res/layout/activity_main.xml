@@ -129,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="3">
 
             <!-- BOTÓN 1  -->
             <Button
@@ -149,9 +149,25 @@
                 app:strokeColor="#528E52"
                 app:strokeWidth="2dp" />
 
-
-
             <!-- BOTÓN 2 -->
+            <Button
+                android:id="@+id/btn_Reportes"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Reportes"
+                android:textColor="#528E52"
+                android:textSize="13sp"
+                app:icon="@drawable/reportes_icon"
+                app:iconGravity="textTop"
+                app:iconTint="#528E52"
+                app:strokeColor="#528E52"
+                app:strokeWidth="2dp" />
+
+            <!-- BOTÓN 3 -->
             <Button
                 android:id="@+id/btn_CerrarSesion"
                 style="@style/Widget.Material3.Button.OutlinedButton"
@@ -168,6 +184,7 @@
                 app:iconTint="#528E52"
                 app:strokeColor="#528E52"
                 app:strokeWidth="2dp" />
+
 
         </LinearLayout>
 

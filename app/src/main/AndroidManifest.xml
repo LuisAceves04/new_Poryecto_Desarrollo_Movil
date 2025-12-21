@@ -56,6 +56,10 @@
             android:name=".ui.theme.ReporteActivity"
             android:exported="false" />
 
+        <activity android:name=".ui.theme.MisReportesActivity"
+            android:exported="false"
+            />
+
 
 
     </application>

@@ -28,8 +28,8 @@ public class NetworkUtils {
             connection.setRequestProperty("Content-Type", "application/json; utf-8");
             connection.setRequestProperty("Accept", "application/json");
             connection.setDoOutput(true);
-            connection.setConnectTimeout(10000); // 10 segundos de timeout
-            connection.setReadTimeout(10000); // 10 segundos de timeout
+            connection.setConnectTimeout(10000);
+            connection.setReadTimeout(10000);
 
             // Escribir los datos JSON en el cuerpo de la solicitud
             try (OutputStream os = connection.getOutputStream()) {
@@ -71,6 +71,55 @@ public class NetworkUtils {
             if (connection != null) {
                 connection.disconnect();
                 Log.d(TAG, "Conexión cerrada");
+            }
+        }
+    }
+    public static String get(String urlString) {
+        HttpURLConnection connection = null;
+        try {
+            URL url = new URL(urlString);
+            connection = (HttpURLConnection) url.openConnection();
+
+            Log.d(TAG, "Conectando (GET) a: " + urlString);
+
+            // Configurar la conexión para GET
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Accept", "application/json");
+            connection.setConnectTimeout(10000);
+            connection.setReadTimeout(10000);
+
+            // Obtener el código de respuesta
+            int responseCode = connection.getResponseCode();
+            Log.d(TAG, "📥 Código de respuesta GET: " + responseCode);
+
+            // Leer la respuesta (Similar a tu método POST)
+            BufferedReader in;
+            if (responseCode >= 200 && responseCode < 300) {
+                in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            } else {
+                in = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
+            }
+
+            String inputLine;
+            StringBuilder response = new StringBuilder();
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            String responseString = response.toString();
+            Log.d(TAG, "Respuesta del servidor (GET): " + responseString);
+
+            return responseString;
+
+        } catch (Exception e) {
+            Log.e(TAG, "Error in getRequest: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+                Log.d(TAG, "Conexión GET cerrada");
             }
         }
     }
