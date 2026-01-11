@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.fic.proyecto_desarrollo_movil.HomeActivity;
 import com.fic.proyecto_desarrollo_movil.R;
 import com.fic.proyecto_desarrollo_movil.ui.theme.RegisterActivity;
+import com.fic.proyecto_desarrollo_movil.ui.theme.AdminPanelActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,7 +65,14 @@ public class LoginActivity extends AppCompatActivity {
     private void checkExistingSession() {
         SharedPreferences prefs = getSharedPreferences("user_session", MODE_PRIVATE);
         if (prefs.getBoolean("is_logged_in", false)) {
-            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            String rol = prefs.getString("user_role", "usuario");
+
+            Intent intent;
+            if ("admin".equalsIgnoreCase(rol)) {
+                intent = new Intent(LoginActivity.this, AdminPanelActivity.class);
+            } else {
+                intent = new Intent(LoginActivity.this, HomeActivity.class);
+            }
             startActivity(intent);
             finish();
         }
@@ -191,33 +199,38 @@ public class LoginActivity extends AppCompatActivity {
             JSONObject jsonResponse = new JSONObject(response);
             boolean success = jsonResponse.getBoolean("success");
 
-            Log.d(TAG, "Success: " + success);
-
             if (success) {
-                String message = jsonResponse.getString("message");
-                Log.d(TAG, "Mensaje: " + message);
+                saveUserSession(jsonResponse, email); // Guardamos datos primero
 
-                saveUserSession(jsonResponse, email);
+                // OBTENER EL ROL DEL JSON
+                JSONObject userData = jsonResponse.getJSONObject("usuario");
+                // Agregamos .trim() para eliminar espacios accidentales
+                // Cambia esto:
+                String rol = userData.optString("rol", "usuario");
 
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                 rol = userData.optString("rol", "usuario").trim().toLowerCase();
+                Log.d(TAG, "VALOR EXACTO DEL ROL: [" + rol + "]");
+
+                Intent intent;
+                if (rol.equalsIgnoreCase("admin")) {
+                    // SI ES ADMIN -> Va al Panel Admin
+                    intent = new Intent(LoginActivity.this, AdminPanelActivity.class);
+                } else {
+                    // SI ES USUARIO -> Va al Home normal
+                    intent = new Intent(LoginActivity.this, HomeActivity.class);
+                }
+
                 startActivity(intent);
                 finish();
-
-                Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Bienvenido " + rol, Toast.LENGTH_SHORT).show();
 
             } else {
-                String errorMessage = "Credenciales incorrectas";
-                if (jsonResponse.has("message")) {
-                    errorMessage = jsonResponse.getString("message");
-                }
-                Log.d(TAG, "Error del servidor: " + errorMessage);
+                // ... (tu manejo de errores sigue igual) ...
+                String errorMessage = jsonResponse.optString("message", "Credenciales incorrectas");
                 Toast.makeText(this, "Error: " + errorMessage, Toast.LENGTH_SHORT).show();
             }
-
         } catch (JSONException e) {
-            Log.e(TAG, "Error parseando JSON: " + e.getMessage());
-            Log.e(TAG, "Respuesta que falló: " + response);
-            Toast.makeText(this, "Error de conexión con el servidor", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
     }
 
@@ -239,6 +252,11 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (userData.has("nombre")) {
                     editor.putString("user_name", userData.getString("nombre"));
+                }
+                if (userData.has("rol")) {
+                    editor.putString("user_role", userData.getString("rol"));
+                } else {
+                    editor.putString("user_role", "usuario");
                 }
             }
         } catch (JSONException e) {

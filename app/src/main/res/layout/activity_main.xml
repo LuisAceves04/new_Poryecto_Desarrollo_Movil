@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:letterSpacing="0.09"
-            android:text="@string/tv_encabezado_parkManager"
+            android:text="@string/tv_gestor_parques"
             android:textColor="@android:color/white"
             android:textSize="30sp"
             android:textStyle="bold" />

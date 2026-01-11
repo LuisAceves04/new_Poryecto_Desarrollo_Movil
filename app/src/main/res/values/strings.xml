@@ -17,18 +17,28 @@
     <string name="et_buscarParques">Buscar parques en Culiacán...</string>
     <string name="et_apellidosR">Apellidos</string>
     <string name="btn_cerrarSesion">Cerrar Sesión</string>
-    <string name="tv_encabezado_parkManager">Park Manager</string>
+    <string name="tv_encabezado_parkManager">Gestor Parques</string>
     <string name="tv_nuevo_reporte">Hacer Nuevo Reporte</string>
     <string name="tv_parque_seleccionado">Parque Seleccionado:</string>
     <string name="tv_detalle_reporte">Detalles del Reporte:</string>
     <string name="et_ejemplo_reporte">Ej. Falla en la iluminación, banca rota, etc.</string>
     <string name="btn_enviar_reporte">Enviar Reporte</string>
-    <string name="tv_titulo_lista">Park Manager</string>
+    <string name="tv_titulo_lista">Gestor Parques</string>
     <string name="tv_subtitulo_lista">Explorar Parques</string>
     <string name="tv_nombre_item">Nombre del Parque</string>
     <string name="tv_direccion_item">Ubicación</string>
     <string name="tv_mis_reportes">Mis Reportes</string>
     <string name="tv_fecha_item_reportes">Fecha: 2023-10-10</string>
     <string name="tv_descripcion_problema">Descripción del problema...</string>
+    <string name="tv_gestor_parques">Gestor Parques</string>
+    <string name="tv_nuevo_parque">Registrar Nuevo Parque</string>
+    <string name="tv_nombre_parque">Nombre del Parque</string>
+    <string name="tv_direccion_parque">Ubicación / Dirección</string>
+    <string name="et_descripcion">Descripción (Opcional)</string>
+    <string name="btn_guardar_parque">Guardar Parque</string>
+    <string name="tv_panel_admin">Panel de Administrador</string>
+    <string name="btn_alta_parque">Dar de Alta Parque</string>
+    <string name="btn_nuevo_admin">Registrar Nuevo Admin</string>
+    <string name="btn_cerrar_sesion">Cerrar Sesión</string>
 
 </resources>
