@@ -1,55 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center_horizontal"
     android:background="#FFFFFF">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_nuevo_parque"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:color="#333"
-        android:layout_marginBottom="30dp"/>
-
-    <EditText
-        android:id="@+id/etNombreParque"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/tv_nombre_parque"
-        android:inputType="textCapWords"
-        android:minHeight="48dp"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <EditText
-        android:id="@+id/etUbicacionParque"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/tv_direccion_parque"
-        android:inputType="textPostalAddress"
-        android:minHeight="48dp"
-        android:layout_marginBottom="16dp"/>
+        <!-- Encabezado con Icono -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_menu_mapmode"
+            android:layout_marginTop="16dp"
+            app:tint="#71AB71" />
 
-    <EditText
-        android:id="@+id/etDescParque"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/et_descripcion"
-        android:inputType="textMultiLine"
-        android:minLines="3"
-        android:gravity="top|start"
-        android:minHeight="48dp"
-        android:layout_marginBottom="24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_nuevo_parque"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"/>
 
-    <Button
-        android:id="@+id/btnGuardarParque"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="@string/btn_guardar_parque"
-        android:textSize="16sp"/>
+        <!-- Nombre del Parque -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/tv_nombre_parque"
+            app:boxStrokeColor="#71AB71"
+            app:hintTextColor="#71AB71"
+            app:startIconDrawable="@android:drawable/ic_menu_edit">
 
-</LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombreParque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ubicación / Dirección -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/tv_direccion_parque"
+            app:boxStrokeColor="#71AB71"
+            app:hintTextColor="#71AB71"
+            app:startIconDrawable="@android:drawable/ic_dialog_map">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUbicacionParque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Descripción -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="@string/et_descripcion"
+            app:boxStrokeColor="#71AB71"
+            app:hintTextColor="#71AB71"
+            app:startIconDrawable="@android:drawable/ic_menu_info_details">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescParque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:gravity="top|start" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón Guardar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardarParque"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/btn_guardar_parque"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:backgroundTint="#71AB71"
+            android:textColor="#FFFFFF"
+            app:elevation="4dp"/>
+
+    </LinearLayout>
+</ScrollView>
