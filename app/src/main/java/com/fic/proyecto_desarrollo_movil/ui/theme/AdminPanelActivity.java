@@ -32,5 +32,10 @@ public class AdminPanelActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
+        btnAltaAdmin.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminPanelActivity.this, AltaAdminActivity.class);
+            startActivity(intent);
+        });
+        }
     }
-}
