@@ -1,27 +1,27 @@
 <resources>
-    <string name="app_name">Proyecto-Desarrollo-Movil</string>
+    <string name="app_name">Proyecto Desarrollo Movil</string>
     <string name="TV_inicio_de_sesion">Inicio de Sesion</string>
     <string name="ET_hintCorreo">   Correo Electronico</string>
-    <string name="ET_hintPassword">Contraseña</string>
+    <string name="ET_hintPassword">Contrasena</string>
     <string name="btn_InicioSesion">Iniciar Sesión</string>
-    <string name="TV_Registrar">¿No tienes cuenta? Regístrate aquí</string>
+    <string name="TV_Registrar">\u00bfNo tienes cuenta? Reg\u00edstrate aqu\u00ed</string>
     <string name="title_activity_registrar_usuario">RegistrarUsuario</string>
-    <string name="image_description">Descripción de la imagen para accesibilidad</string>
+    <string name="image_description">Descripción de la imagen</string>
     <string name="ET_crearCuenta">Crear Cuenta Nueva</string>
     <string name="ET_nombre">Nombre de Usuario</string>
     <string name="ET_correoRegistrar">Correo</string>
-    <string name="ET_contraseñaRegistrar">Contraseña</string>
+    <string name="ET_contraseñaRegistrar">Contrasena</string>
     <string name="btn_registrarse">Registrarse</string>
     <string name="tx_btnParques">Lista Parques</string>
-    <string name="tv_encabezadoCiudad">📍 Culiacán, Sinaloa</string>
-    <string name="et_buscarParques">Buscar parques en Culiacán...</string>
+    <string name="tv_encabezadoCiudad">Culiacan, Sinaloa</string>
+    <string name="et_buscarParques">Buscar parques en Culiacan...</string>
     <string name="et_apellidosR">Apellidos</string>
     <string name="btn_cerrarSesion">Cerrar Sesión</string>
     <string name="tv_encabezado_parkManager">Gestor Parques</string>
     <string name="tv_nuevo_reporte">Hacer Nuevo Reporte</string>
     <string name="tv_parque_seleccionado">Parque Seleccionado:</string>
     <string name="tv_detalle_reporte">Detalles del Reporte:</string>
-    <string name="et_ejemplo_reporte">Ej. Falla en la iluminación, banca rota, etc.</string>
+    <string name="et_ejemplo_reporte">Ej. Falla en la iluminacion, banca rota, etc.</string>
     <string name="btn_enviar_reporte">Enviar Reporte</string>
     <string name="tv_titulo_lista">Gestor Parques</string>
     <string name="tv_subtitulo_lista">Explorar Parques</string>
@@ -40,5 +40,4 @@
     <string name="btn_alta_parque">Dar de Alta Parque</string>
     <string name="btn_nuevo_admin">Registrar Nuevo Admin</string>
     <string name="btn_cerrar_sesion">Cerrar Sesión</string>
-
 </resources>

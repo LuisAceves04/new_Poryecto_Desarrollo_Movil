@@ -60,16 +60,21 @@
             android:exported="false"
             />
 
-        <activity android:name=".ui.theme.AdminPanelActivity"
-            android:exported="false"
-            tools:ignore="Instantiatable" />
-
         <activity
             android:name=".ui.theme.AltaParqueActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
 
-        <activity android:name=".ui.theme.AltaAdminActivity" />
+        <!-- AdminPanel -->
+        <activity
+            android:name=".ui.theme.AdminPanelActivity"
+            android:exported="false" />
+
+        <!-- AltaAdmin - Corregida -->
+        <activity
+            android:name=".ui.theme.AltaAdminActivity"
+            android:label="Alta de Administrador"
+            android:exported="false" />
 
     </application>
 
